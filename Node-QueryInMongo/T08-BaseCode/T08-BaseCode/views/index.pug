@@ -1,0 +1,42 @@
+html
+	head
+		title Card Searcher
+	
+	body
+		h1 Card Database
+
+		p Enter data into the filter form below and hit refresh to find matching cards.
+		form(action="/result" method="post")
+			p Artist:
+				input#artist(type="textbox" name="artist")
+			p Name:
+				input#name(type="textbox" name="name")
+			p Min Attack:
+				input#minattack(type="textbox" name="minattack")
+			p Max Attack:
+				input#maxattack(type="textbox" name="maxattack")
+			p Min Health:
+				input#minhealth(type="textbox" name="minhealth")
+			p Max Health:
+				input#maxhealth(type="textbox" name="maxhealth")
+			p Class:
+				select#class(name="class")
+					option="DRUID"
+					option="HUNTER"
+					option="MAGE"
+					option="NEUTRAL"
+					option="PALADIN"
+					option="PRIEST"
+					option="ROGUE"
+					option="SHAMAN"
+					option="WARLOCK"
+					option="WARRIOR"
+			p Rarity:
+				select#rarity(name="rarity")
+					option="COMMON"
+					option="EPIC"
+					option="FREE"
+					option="LEGENDARY"
+					option="RARE"
+			input(type="submit" value="Refresh Results" id="submit")
+		div#results

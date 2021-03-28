@@ -1,0 +1,6 @@
+html 
+    body
+        ul
+            each card in result
+                a(href=`http://localhost:3000/cards/${card._id}`)
+                    li= card.name
